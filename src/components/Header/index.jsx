@@ -6,13 +6,21 @@ import iconUser from '../../assets/icon-user.svg';
 import iconCart from '../../assets/icon-cart.svg';
 import iconMenu from '../../assets/icon-menu.svg';
 
-import { Container, Menu, Logo, InputContainer, AccountContainer, Account, Cart } from './styles';
+import {
+  Container,
+  Menu,
+  Logo,
+  InputContainer,
+  AccountContainer,
+  Account,
+  Cart,
+} from './styles';
 
 function Header() {
   return (
     <Container>
       <div>
-        <Menu src={iconMenu} alt="Menu" hidden/>
+        <Menu src={iconMenu} alt="Menu" hidden />
         <Logo src={logoImg} alt="Logo" />
         <InputContainer>
           <input type="text" placeholder="O que está procurando?" />
@@ -23,11 +31,11 @@ function Header() {
 
         <AccountContainer>
           <Account>
-            <img src={iconUser} alt="Avatar"/>
+            <img src={iconUser} alt="Avatar" />
             <span>Minha Conta</span>
           </Account>
           <Cart>
-            <img src={iconCart} alt="Carrinho"/>
+            <img src={iconCart} alt="Carrinho" />
             <div>
               <span>1</span>
             </div>

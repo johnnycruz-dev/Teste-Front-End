@@ -28,7 +28,7 @@ export const Logo = styled.img`
     height: 25px;
     padding: 0px;
   }
-`
+`;
 
 export const Menu = styled.img`
   @media screen and (max-width: 620px) {
@@ -53,7 +53,7 @@ export const InputContainer = styled.div`
     width: 100%;
     border: none;
     padding: 6px 0px;
-    border-bottom: 1px solid #7A7A7A;
+    border-bottom: 1px solid #7a7a7a;
   }
 
   button {
@@ -68,7 +68,7 @@ export const InputContainer = styled.div`
       opacity: 0.6;
     }
   }
-`
+`;
 
 export const AccountContainer = styled.div`
   width: 100%;
@@ -98,7 +98,7 @@ export const Account = styled.div`
   }
 
   span {
-    color: #7A7A7A;
+    color: #7a7a7a;
     font-size: 13px;
     font-weight: 400;
   }
@@ -114,7 +114,7 @@ export const Cart = styled.div`
   }
 
   div {
-    background-color: #F8475F;
+    background-color: #f8475f;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -123,11 +123,9 @@ export const Cart = styled.div`
     height: 14px;
 
     span {
-      color: #FFF;
+      color: #fff;
       font-weight: 700;
       font-size: 10px;
     }
   }
-
 `;
-

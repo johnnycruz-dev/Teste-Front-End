@@ -9,7 +9,7 @@ function App() {
       <Dashboard />
       <GlobalStyle />
     </>
-  )
+  );
 }
 
 export default App;
