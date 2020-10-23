@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import logoImg from '../../assets/logo.png';
+import logoCorebiz from '../../assets/logo.svg';
 import iconSearch from '../../assets/icon-search.svg';
 import iconUser from '../../assets/icon-user.svg';
 import iconCart from '../../assets/icon-cart.svg';
@@ -16,12 +17,12 @@ import {
   Cart,
 } from './styles';
 
-function Header() {
+function Header({ cartCounter }) {
   return (
     <Container>
       <div>
         <Menu src={iconMenu} alt="Menu" hidden />
-        <Logo src={logoImg} alt="Logo" />
+        <Logo src={logoCorebiz} alt="Corebiz" />
         <InputContainer>
           <input type="text" placeholder="O que está procurando?" />
           <button type="button">
@@ -37,7 +38,7 @@ function Header() {
           <Cart>
             <img src={iconCart} alt="Carrinho" />
             <div>
-              <span>1</span>
+              <span>{cartCounter}</span>
             </div>
           </Cart>
         </AccountContainer>
@@ -45,5 +46,9 @@ function Header() {
     </Container>
   );
 }
+
+Header.propTypes = {
+  cartCounter: PropTypes.number.isRequired,
+};
 
 export default Header;

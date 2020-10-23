@@ -1,7 +1,8 @@
 const formatValue = value => {
-  const cents = value.substring(value.length - 2);
-  const real = value.substring(0, value.length - 2);
-  const valueFormatted = `${real}.${cents}`;
+  const valueFormatted = `${value.substring(
+    0,
+    value.length - 2,
+  )}.${value.substring(value.length - 2)}`;
 
   return Intl.NumberFormat('pt-BR', {
     style: 'currency',

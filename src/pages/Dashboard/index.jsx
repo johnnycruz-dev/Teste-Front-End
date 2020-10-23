@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Banner from '../../components/Banner';
 import Product from '../../components/Product';
+import Newsletter from '../../components/Newsletter';
+import Footer from '../../components/Footer';
 
 import banner1 from '../../assets/banner-img1.png';
 import banner2 from '../../assets/01.jpg';
@@ -19,14 +21,29 @@ function Dashboard() {
       id: 2,
     },
   ]);
+  const [cartCounter, setCartCounter] = useState(() => {
+    const counter = Number(localStorage.getItem('@Corebiz:counter'));
+
+    if (counter) {
+      return counter;
+    }
+
+    return 0;
+  });
 
   function handleSliderButton(id) {
     setSelectedBanner(id);
   }
 
+  function handleAddCart() {
+    setCartCounter(cartCounter + 1);
+
+    localStorage.setItem('@Corebiz:counter', cartCounter + 1);
+  }
+
   return (
     <>
-      <Header />
+      <Header cartCounter={cartCounter} />
       <BannersContainer>
         <Banner bannerImage={banner1} showBanner={selectedBanner === 1} />
         <Banner
@@ -48,7 +65,9 @@ function Dashboard() {
           ))}
         </Slider>
       </BannersContainer>
-      <Product />
+      <Product addCart={handleAddCart} />
+      <Newsletter />
+      <Footer />
     </>
   );
 }

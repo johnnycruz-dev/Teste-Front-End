@@ -119,8 +119,8 @@ export const Cart = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 
     span {
       color: #fff;

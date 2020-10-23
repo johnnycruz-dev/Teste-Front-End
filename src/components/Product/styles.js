@@ -8,23 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   max-width: 1220px;
   margin: 0 auto 48px;
-  padding: 0 24px;
-
-  @media screen and (max-width: 1250px) {
-    width: 98%;
-  }
-
-  @media screen and (max-width: 940px) {
-    width: 75%;
-  }
-
-  @media screen and (max-width: 660px) {
-    width: 60%;
-  }
-
-  @media screen and (max-width: 620px) {
-    width: 75%;
-  }
+  padding: 0 12px;
 
   h1 {
     position: relative;
@@ -50,38 +34,55 @@ export const Container = styled.div`
 export const ProductContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 99px;
   position: relative;
 
   @media screen and (max-width: 1250px) {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 99px;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 10px;
   }
 
-  @media screen and (max-width: 940px) {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 99px;
-  }
-
-  @media screen and (max-width: 620px) {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 38px;
+  .hidden {
+    display: none;
   }
 `;
 
 export const ArrowLeft = styled.img`
-  position: absolute;
-  left: -50px;
-  top: 45%;
-  z-index: 100000;
+  cursor: pointer;
+  margin: auto 0;
+
+  @media screen and (max-width: 620px) {
+    display: none;
+  }
 `;
 
 export const ArrowRight = styled.img`
-  position: absolute;
-  right: -50px;
-  top: 45%;
-  z-index: 100000;
+  cursor: pointer;
+  margin: auto 0;
+
+  @media screen and (max-width: 620px) {
+    display: none;
+  }
+`;
+
+export const WebCarousel = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+
+  @media screen and (max-width: 620px) {
+    display: none;
+  }
+`;
+
+export const MobileCarousel = styled.div`
+  display: none;
+  width: 100%;
+
+  @media screen and (max-width: 620px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ProductItem = styled.a`
@@ -90,6 +91,11 @@ export const ProductItem = styled.a`
   justify-content: center;
   flex-direction: column;
   position: relative;
+
+  @media screen and (max-width: 1250px) {
+    max-width: max-content;
+    margin: 0 auto;
+  }
 
   &:hover {
     cursor: pointer;
@@ -204,4 +210,20 @@ export const Flag = styled.span`
       height: 44px;
     }
   }
+`;
+
+export const Slider = styled.div`
+  position: absolute;
+  bottom: -15%;
+  left: 46%;
+  z-index: 10000000;
+`;
+
+export const SliderButton = styled.button`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: ${props => (props.active ? '#F8475F' : '#BDBDBD')};
+  border: none;
+  margin-right: 8px;
 `;
