@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="./images/Capa.png"/>
+</div>
+
 ## Teste Front-End Corebiz 🚀️
 
 ### :zap: Executando o Projeto
