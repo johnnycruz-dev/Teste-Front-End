@@ -7,7 +7,7 @@ import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
 
 import banner1 from '../../assets/banner-img1.png';
-import banner2 from '../../assets/01.jpg';
+import banner2 from '../../assets/banner-img2.png';
 
 import { BannersContainer, Slider, SliderButton } from './styles';
 
